@@ -1,0 +1,53 @@
+# Academic files
+*.aux
+*.log
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.pdf
+*.dvi
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+venv/
+env/
+
+# Java
+*.class
+*.jar
+target/
+
+# C/C++
+*.o
+*.exe
+*.out
+a.out
+
+# MATLAB
+*.asv
+*.m~
+
+# Temporary files
+*.tmp
+*.temp
