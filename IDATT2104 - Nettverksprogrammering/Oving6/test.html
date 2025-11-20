@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Client</h1>
+    <canvas id="drawCanvas" width="500" height="500" style="border:1px solid black;"></canvas>
+    <button onclick="clearCanvas()">Clear</button>
+
+
+    <script>
+        let ws = new WebSocket('ws://localhost:3001');
+
+        ws.onopen = () => console.log("Connected to WebSocket server");
+
+        ws.onmessage = (event) => {
+            let {x, y, type} = JSON.parse(event.data);
+            if (type === "clear") {
+                clearCanvas();
+                return;
+            } else {
+                drawFromServer(x, y, type);
+            }
+            
+        };
+
+        function sendMessage() {
+            let msg = document.getElementById("message").value;
+            ws.send(msg);
+        }
+        const canvas = document.getElementById("drawCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let drawing = false;
+
+        function startPosition(e) {
+            drawing = true;
+            draw(e, "start");
+        }
+
+        function endPosition() {
+            drawing = false;
+            ctx.beginPath();
+        }
+
+        function draw(e, type = "move") {
+            if (!drawing) return;
+
+            const x = e.clientX - canvas.offsetLeft;
+            const y = e.clientY - canvas.offsetTop;
+
+            ctx.lineWidth = 3;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "black";
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+
+            ws.send(JSON.stringify({x, y, type}));
+        }
+
+        function drawFromServer(x, y, type) {
+            if (type === "start") {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            }
+        }
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        canvas.addEventListener("mousedown", startPosition);
+        canvas.addEventListener("mouseup", endPosition);
+        canvas.addEventListener("mousemove", draw);
+    </script>
+</body>
+</html>
