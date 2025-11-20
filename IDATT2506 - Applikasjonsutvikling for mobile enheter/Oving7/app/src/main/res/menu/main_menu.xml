@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="always" />
+
+
+    <item android:id="@+id/query_all_movies" android:title="Alle filmer" />
+    <item android:id="@+id/query_all_directors" android:title="Alle regissører" />
+    <item android:id="@+id/query_movies_nolan" android:title="Filmer av Christopher Nolan" />
+    <item android:id="@+id/query_actors_inception" android:title="Skuespillere i 'Inception'" />
+    <item android:id="@+id/query_movies_leo" android:title="Filmer med Leonardo DiCaprio" />
+
+</menu>

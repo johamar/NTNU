@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        app:key="bg_color"
+        app:title="Bakgrunnsfarge"
+        app:entries="@array/bg_color_names"
+        app:entryValues="@array/bg_color_values"
+        app:defaultValue="white"
+        app:useSimpleSummaryProvider="true" />
+</PreferenceScreen>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="24sp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="24sp"
+        android:layout_below="@id/number1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/labelSvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/svar"
+        android:layout_below="@id/number2"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/editSvar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="8"
+        android:layout_alignBaseline="@id/labelSvar"
+        android:layout_toEndOf="@id/labelSvar"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/labelOvreGrense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ovre_grense"
+        android:layout_below="@id/labelSvar"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editOvreGrense"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="10"
+        android:layout_alignBaseline="@id/labelOvreGrense"
+        android:layout_toEndOf="@id/labelOvreGrense"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adder"
+        android:onClick="onClickAdd"
+        android:layout_below="@id/labelOvreGrense"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonMult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multipliser"
+        android:onClick="onClickMultiply"
+        android:layout_below="@id/buttonAdd"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
