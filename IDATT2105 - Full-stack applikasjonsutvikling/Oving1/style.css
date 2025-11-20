@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(26, 194, 250);
+}
+.grid_container {
+    display: grid;
+    grid-template-areas: 'menu header header header header'
+                         'menu content content content content'
+                         'menu content content content content'
+                         'footer footer footer footer footer';
+}
+@media only screen and (max-width: 600px) {
+    .grid_container {
+        display: grid;
+        grid-template-areas: 'header'
+                             'menu'
+                             'content'
+                             'footer';
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .grid_container {
+        display: grid;
+        grid-template-areas: 'menu header header header header'
+                             'menu content content content content'
+                             'menu content content content content'
+                             'footer footer footer footer footer';
+    }
+}
+.header {
+    grid-area: header;
+    margin: 20px 20px 10px 10px;
+    border: 10px;
+    padding: 20px;
+    background-color: #d10d0d;
+    border-radius: 10px;
+    text-align: center;
+}
+#logo {
+    width: 200px;
+    height: 250px;
+}
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    
+}
+.menu {
+    grid-area: menu;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 20px 10px 10px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+#menu_calc {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#menu_calc li {
+    color: #f0f0f0;
+    margin: 0;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+}
+#menu_calc li button {
+    background-color: #d10d0d;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    cursor: pointer;
+}
+/* #menu_calc li button:hover {
+    color: #d10d0d;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}  */
+#counter {
+    text-align: center;
+    font-size: 30px;
+}
+#sum {
+    background-color: #f0f0f0;
+    margin: 20px;
+    height: 60px;
+    width: 60px;
+}
+li {
+    background-color: #333;
+    color: #f0f0f0;
+    margin: 20px;
+    padding: 10px;
+}
+#menu_list li:hover {
+    color: #d10d0d;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.content {
+    grid-area: content;
+    grid-column: 2 / 6;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px 20px 10px 10px;
+    padding: 20px;
+    text-align: center;
+}
+#intro {
+    justify-content: center;
+    align-items: center;
+}
+#tuilarena {
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.footer {
+    grid-area: footer;
+    margin: 10px 20px 20px 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    text-align: center;
+}
+#footer_text {
+    color: #f0f0f0;
+    font-size: 13px;
+}
+#generate_list_btn {
+    background-color: #d10d0d;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+}
+#toggle {
+    background-color: #d10d0d;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    cursor: pointer;
+}
