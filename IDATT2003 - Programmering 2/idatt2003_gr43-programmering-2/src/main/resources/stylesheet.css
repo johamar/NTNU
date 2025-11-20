@@ -1,0 +1,45 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #F2F2F2;
+}
+
+.button {
+    -fx-background-color: darkgray;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: gray;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-padding: 5px;
+}
+
+.menu-button {
+    -fx-background-color: darkgray;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+}
+
+.menu-button:hover {
+    -fx-background-color: gray;
+}
+
+.menu-item {
+    -fx-padding: 5px 10px;
+}
+
+.vbox {
+    -fx-spacing: 10px;
+}
+
+.canvas {
+    -fx-background-color: white;
+}

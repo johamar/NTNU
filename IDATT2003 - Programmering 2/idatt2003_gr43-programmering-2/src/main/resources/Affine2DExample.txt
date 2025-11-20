@@ -1,0 +1,6 @@
+Affine2D              # type of transformation
+0, 0                  # min x, min y
+1, 1                  # max x, max y
+.5, 0, 0, .5, 0, 0    # 1st transform
+.5, 0, 0, .5, .25, .5 # 2nd transform
+.5, 0, 0, .5, .5, 0   # 3rd transform

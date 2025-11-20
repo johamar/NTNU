@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ComplexTest$testsFromVector2D
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in ComplexTest$testsFromVector2D
